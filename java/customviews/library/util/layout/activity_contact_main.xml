@@ -1,0 +1,355 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    tools:context="com.ginko.activity.contact.ContactMainActivity"
+    >
+    <RelativeLayout
+        android:id="@+id/headerlayout"
+        android:background="#ffc4ffb6"
+        android:layout_width="fill_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/btnSearch"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15.0dip"
+            android:src="@drawable/btnsearchnav"
+            android:scaleType="fitXY"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textSize="26.0sp"
+            android:textStyle="bold"
+            android:textColor="#ff37632b"
+            android:id="@+id/txtTitle"
+            android:text="@string/title_activity_contact_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_title_bar_top_bottom_padding"
+            android:layout_marginBottom="@dimen/activity_title_bar_top_bottom_padding"
+            android:layout_centerInParent="true" />
+
+        <RelativeLayout
+            android:id="@+id/chatNavLayout"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:id="@+id/btnChatNav"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="false"
+                android:src="@drawable/btnchatnav"
+                android:scaleType="fitXY"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtMessageBadge"
+                android:layout_alignParentRight="false"
+                android:minWidth="23dp"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:text="1"
+                android:layout_marginTop="12dp"
+                android:singleLine="true"
+                android:gravity="center"
+                android:background="@drawable/white_number_badge_bg"
+                android:visibility="invisible"
+                android:layout_marginLeft="13dp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bodyLayout"
+        android:baselineAligned="false"
+        android:background="@drawable/leafbgforblank"
+        >
+        <LinearLayout
+            android:id="@+id/shortCutButtonLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/contact_navi"
+            android:orientation="vertical"
+            android:paddingLeft="70dp"
+            android:paddingRight="70dp"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:visibility="invisible">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#7e5785"/>
+            <ImageView
+                android:id="@+id/btnTurnOnBuilder"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:scaleType="fitCenter"
+                android:onClick="onClickCB"
+                android:src="@drawable/btn_blank_builder"/>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#7e5785"/>
+            <ImageView
+                android:id="@+id/btnTurnOnSprout"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:scaleType="fitCenter"
+                android:onClick="onClickGps"
+                android:src="@drawable/btn_blank_sprout"/>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#7e5785"/>
+            <ImageView
+                android:id="@+id/btnInviteContacts"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:scaleType="fitCenter"
+                android:onClick="onClickExchange"
+                android:src="@drawable/btn_blank_contact"/>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#7e5785"/>
+            <ImageView
+                android:id="@+id/btnImportContacts"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:scaleType="fitCenter"
+                android:onClick="onClickImportContacts"
+                android:src="@drawable/btn_blank_import"/>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#7e5785"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/contactListLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/contact_navi"
+            android:orientation="vertical"
+            android:visibility="visible">
+            <LinearLayout
+                android:id="@+id/contactFilterLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:baselineAligned="true"
+                android:layout_marginTop="10dp" >
+
+                <ImageButton
+                    android:id="@+id/filter_entity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:background="@android:color/transparent"
+                    android:onClick="onClickFilter"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/btnentity" />
+
+                <ImageButton
+                    android:id="@+id/filter_work"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:background="@android:color/transparent"
+                    android:onClick="onClickFilter"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/btnwork" />
+
+                <ImageButton
+                    android:id="@+id/filter_home"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:background="@android:color/transparent"
+                    android:onClick="onClickFilter"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/btnhome" />
+
+                <ImageButton
+                    android:id="@+id/noFilter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:background="@android:color/transparent"
+                    android:onClick="onClickFilter"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/btnall" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contact_list_container"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <com.hb.views.PullToRefreshPinnedSectionListView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/pull_refresh_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@null"
+                    android:scrollbars="none"
+                    android:footerDividersEnabled="false"
+                    android:headerDividersEnabled="false" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/contact_navi"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/tabbar" >
+
+            <ImageButton
+                android:id="@+id/btntabbuilder"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:onClick="onClickCB"
+                android:padding="18dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/btntabbuilder" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ImageButton
+                    android:id="@+id/btnSprout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:background="@android:color/transparent"
+                    android:onClick="onClickGps"
+                    android:padding="15dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/satellite_off" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtSproutBadge"
+                    android:layout_alignLeft="@+id/btnSprout"
+                    android:layout_alignTop="@+id/btnSprout"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="35dp"
+                    android:minWidth="23dp"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:text="1"
+                    android:singleLine="true"
+                    android:gravity="center"
+                    android:background="@drawable/white_number_badge_bg"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ImageButton
+                    android:id="@+id/btntabexchange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/transparent"
+                    android:onClick="onClickExchange"
+                    android:padding="18dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/btntabexchange" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtExchangeRequestBadge"
+                    android:layout_alignRight="@+id/btntabexchange"
+                    android:layout_alignTop="@+id/btntabexchange"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:minWidth="25dp"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:text="1"
+                    android:singleLine="true"
+                    android:gravity="center"
+                    android:background="@drawable/white_number_badge_bg"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/btntabmenu"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:onClick="onClickMainMenu"
+                android:padding="18dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/btntabmenu" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btnThumb"
+            android:layout_width="80dp"
+            android:layout_height="110dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            android:background="@android:color/transparent"
+            android:src="@drawable/fingerprint_disabled"/>
+
+
+    </RelativeLayout>
+</LinearLayout>

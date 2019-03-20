@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/part_a_home_bg"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+	    android:id="@+id/blankLayoutNavBar"
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="0.10"
+	    android:background="#baffb6"
+	    android:gravity="center"
+	    android:orientation="horizontal" >
+		
+        <ImageButton
+       	    android:id="@+id/btnCloseInAddInfo"
+       	    android:layout_width="15dp"
+       	    android:layout_height="15dp"
+       		android:layout_alignParentLeft="true"
+       		android:layout_marginLeft="12dp"
+       		android:layout_centerVertical="true"
+       	    android:adjustViewBounds="true"
+       		android:scaleType="fitXY"
+       	    android:src="@drawable/part_a_btn_close_nav"
+       	    android:background="@android:color/transparent"
+       	    android:contentDescription="@string/button"
+       	    tools:ignore="NestedWeights"
+       	    android:onClick="onBtnCloseInAddInfo" />
+        
+	    <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/home_info"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#2f4f2d"
+            android:textStyle="bold" />
+        
+        <Button
+            android:id="@+id/buttonDoneInAddInfo"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:layout_centerVertical="true"
+            android:textColor="#000000"
+            android:background="@android:color/transparent"
+            android:text="@string/done" />
+
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:id="@+id/blankLayoutProfile"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:gravity="center"
+        android:baselineAligned="false"
+        android:orientation="vertical" />
+
+</LinearLayout>

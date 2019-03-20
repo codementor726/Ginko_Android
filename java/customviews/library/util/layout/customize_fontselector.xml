@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/font_selector"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:baselineAligned="false"
+    android:gravity="center" >
+
+    <com.ginko.customview.DropdownSpinner
+        android:id="@+id/spinnerFontNameInHomeEditInfo"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="0.35"
+        tools:ignore="NestedWeights"
+        android:singleLine="true"
+        android:ellipsize="none"
+        style="@style/SpinnerTheme.DropDown"
+        android:gravity="center_vertical" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.02"/>
+    <com.ginko.customview.DropdownSpinner
+        android:id="@+id/spinnerFontStyleInHomeEditInfo"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="0.23"
+        android:singleLine="true"
+        android:ellipsize="none"
+        style="@style/SpinnerTheme.DropDown"
+        android:layout_toRightOf="@id/spinnerFontNameInHomeEditInfo"
+        tools:ignore="NestedWeights"
+        android:gravity="center_vertical" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.02"/>
+    <com.ginko.customview.DropdownSpinner
+        android:id="@+id/spinnerFontSizeInHomeEditInfo"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="0.14"
+        android:layout_toRightOf="@id/spinnerFontStyleInHomeEditInfo"
+        android:singleLine="true"
+        android:ellipsize="none"
+        style="@style/SpinnerTheme.DropDown"
+        tools:ignore="NestedWeights"
+        android:gravity="center_vertical" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.01"/>
+    <Button
+        android:id="@+id/change_color"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="0.13"
+        android:layout_toRightOf="@id/spinnerFontSizeInHomeEditInfo"
+        android:background="@android:color/black"
+        android:visibility="visible"
+        android:text="    "
+        android:gravity="center_vertical" />
+
+</LinearLayout>

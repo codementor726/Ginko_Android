@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/part_a_splash_bg" >
+    
+    <LinearLayout
+        android:id="@+id/blankLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.33"
+        android:orientation="vertical">
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.33"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/blankLayout2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.15"
+            android:orientation="vertical"
+            tools:ignore="NestedWeights" >
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/image"
+            android:src="@drawable/part_a_logo" />
+
+        <LinearLayout
+            android:id="@+id/blankLayout3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.15"
+            android:orientation="vertical" >
+        </LinearLayout>
+               
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.33"
+        android:orientation="vertical" >
+        
+        <LinearLayout
+            android:id="@+id/loginLayout"
+        	android:layout_width="match_parent"
+        	android:layout_height="0dp"
+        	android:layout_weight="0.5"
+        	android:orientation="horizontal"
+        	tools:ignore="NestedWeights" >
+        	
+	        	<LinearLayout
+            		android:id="@+id/blankLayout6"
+            		android:layout_width="0dp"
+            		android:layout_height="match_parent"
+            		android:layout_weight="0.22"
+            		android:orientation="vertical" >
+        		</LinearLayout>
+
+	        	
+	        	<ImageButton
+	        	    android:id="@+id/btnLogin"
+	        	    android:layout_width="0dp"
+	        	    android:layout_height="wrap_content"
+	        	    android:layout_gravity="center"
+	        	    android:layout_weight="0.56"
+	        	    android:adjustViewBounds="true"
+            		android:scaleType="fitXY"
+	        	    android:src="@drawable/part_a_btn_start_login"
+	        	    android:background="@drawable/button_sel"
+	        	    android:contentDescription="@string/button"
+	        	    android:onClick="onBtnLoginInSign" />
+
+        		<LinearLayout
+            		android:id="@+id/blankLayout7"
+            		android:layout_width="0dp"
+            		android:layout_height="match_parent"
+            		android:layout_weight="0.22"
+            		android:orientation="vertical" >
+        		</LinearLayout>
+        	
+       </LinearLayout>
+        
+       <LinearLayout
+           	android:id="@+id/blankLayout5"
+        	android:layout_width="match_parent"
+        	android:layout_height="0dp"
+        	android:layout_weight="0.5"
+        	android:orientation="horizontal" >
+        		
+           	<LinearLayout
+            		android:id="@+id/blankLayou9"
+            		android:layout_width="0dp"
+            		android:layout_height="match_parent"
+            		android:layout_weight="0.22"
+            		android:orientation="vertical" >
+        		</LinearLayout>
+
+        	<ImageButton
+        	    android:id="@+id/btnRegister"
+        	    android:layout_width="0dp"
+        	    android:layout_height="wrap_content"
+        	    android:layout_gravity="top"
+        	    android:layout_weight="0.56"
+        	    android:adjustViewBounds="true"
+        	    android:background="@drawable/button_sel"
+        	    android:scaleType="fitXY"
+        	    android:src="@drawable/part_a_btn_start_register"
+        	    android:contentDescription="@string/button"
+        	    android:onClick="onBtnRegister" />
+
+       		<LinearLayout
+           		android:id="@+id/blankLayout10"
+           		android:layout_width="0dp"
+           		android:layout_height="match_parent"
+           		android:layout_weight="0.22"
+           		android:orientation="vertical" >
+       		</LinearLayout>
+        		
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>

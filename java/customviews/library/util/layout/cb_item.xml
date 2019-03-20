@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contact_list_item"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="12dip"
+    android:paddingTop="10dip" >
+
+    <ImageView
+        android:id="@+id/validIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="valid or not"
+        android:src="@drawable/confirm"
+        android:layout_gravity="center_vertical"/>
+
+    <TextView
+        android:id="@+id/cbEmailAddress"
+        style="@style/lbl_h2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="none"
+        android:maxLines="2"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:text="stonyz@gmail.com" />
+
+</LinearLayout>

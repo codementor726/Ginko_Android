@@ -1,0 +1,10 @@
+<EditText xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/txtMobile1"
+    style="@style/et_general"
+    android:layout_width="fill_parent"
+    android:layout_height="30dp"
+    android:layout_gravity="end"
+    android:layout_marginTop="23dp"
+    android:ems="10"
+    android:hint="Mobile"
+    android:inputType="phone" />

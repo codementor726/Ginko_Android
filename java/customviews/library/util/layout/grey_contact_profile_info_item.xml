@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/rootLayout">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <ImageView
+            android:layout_width="@dimen/grey_contact_info_item_checkbox_size"
+            android:layout_height="@dimen/grey_contact_info_item_checkbox_size"
+            android:id="@+id/imgCheckbox"
+            android:src="@drawable/contact_info_item_non_selected"
+            android:layout_marginRight="@dimen/grey_contact_info_item_checkbox_right_margin"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imgCheckbox"
+            android:layout_alignParentRight="true">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtInfoItemValue"
+                    android:textColorHint="#aaaaaa"
+                    android:padding="@dimen/grey_contact_info_item_textpadding"
+                    android:textSize="@dimen/grey_contact_info_item_textsize"
+                    android:textColor="#6e4b9a"
+                    android:visibility="visible"/>
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/edtInfoItem"
+                    android:padding="@dimen/grey_contact_info_item_textpadding"
+                    android:background="@drawable/grey_contact_profile_info_item_background"
+                    android:visibility="visible"
+                    android:textColorHint="#aaaaaa"
+                    android:hint="Phone"
+                    android:textSize="@dimen/grey_contact_info_item_textsize"
+                    android:textColor="#6e4b9a"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_include_email_to_invite"
+        android:id="@+id/txtEmailHint"
+        android:layout_marginLeft="50dp"
+        android:textSize="@dimen/grey_contact_info_item_texthintsize"
+        android:textColor="#aaaaaa" />
+</LinearLayout>

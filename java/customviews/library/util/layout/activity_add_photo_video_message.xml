@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffffff">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/activity_title_bar_top_bottom_padding"
+        android:paddingBottom="@dimen/activity_title_bar_top_bottom_padding"
+        android:id="@+id/headerlayout"
+        android:background="#c4ffb6"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Choose Photo"
+            android:id="@+id/txtTittle"
+            android:textColor="#37632B"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/btnClose"
+            android:src="@drawable/btnclose"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bodyLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/leafbgforblank">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="110dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="70dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="@color/blue_text"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Camera"
+                    android:textSize="20sp"/>
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/imgFromCamera"
+                    android:src="@drawable/part_a_btn_camera_purple"
+                    android:scaleType="fitCenter" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="@color/blue_text"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Library"
+                    android:textSize="20sp"/>
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/imgFromGallery"
+                    android:src="@drawable/part_a_btn_cameraroll_purple"
+                    android:scaleType="fitCenter" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/str_choose_photo_bottom_description_text"
+            android:id="@+id/txtDescription"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:textColor="#6e4270"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp" />
+    </RelativeLayout>
+
+
+</LinearLayout>

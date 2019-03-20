@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootLayout">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:background="#ffc4ffb6"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:layout_alignParentTop="true" >
+
+        <ImageView
+            android:id="@+id/btnClose"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15.0dip"
+            android:src="@drawable/btn_home_close"
+            android:scaleType="fitXY"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textSize="26.0sp"
+            android:textStyle="bold"
+            android:textColor="#ff37632b"
+            android:id="@+id/txtTitle"
+            android:text="@string/search_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_title_bar_top_bottom_padding"
+            android:layout_marginBottom="@dimen/activity_title_bar_top_bottom_padding"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/bodyLayout"
+        android:background="#ffffffff">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#c5c5cb"
+            android:id="@+id/searchLayout"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:focusableInTouchMode="true"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:weightSum="1.0">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.8">
+
+                <EditText
+                    android:id="@+id/edtSearch"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/contact_search_edittext_background"
+                    android:hint="@string/search_hint"
+                    android:imeOptions="actionSearch"
+                    android:layout_marginRight="10dp"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:paddingLeft="35dp"
+                    android:paddingRight="20dp"
+                    android:textColor="#000000"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:focusableInTouchMode="true"
+                    android:textSize="18sp"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/imageView6"
+                    android:src="@drawable/edit_action_search_icon"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/str_cancel"
+                android:layout_weight="0.2"
+                android:textColor="#007aff"
+                android:textSize="20sp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                />
+
+        </LinearLayout>
+
+        <ListView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/contactList"
+            android:layout_below="@+id/searchLayout"
+            android:background="@drawable/leafbgforblank"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:scrollbars="none"
+            android:dividerHeight="1dp"
+            android:divider="#7e5785"
+            android:focusableInTouchMode="true"
+            android:listSelector="@drawable/list_selector_holo_light"/>
+    </RelativeLayout>
+
+</LinearLayout>

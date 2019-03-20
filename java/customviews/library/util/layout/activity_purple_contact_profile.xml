@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:networkimageview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id="@+id/rootLayout">
+    <com.ginko.activity.profiles.CustomSizeMeasureView
+        android:id="@+id/sizeMeasureView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/headerlayout"
+            android:paddingTop="@dimen/activity_title_bar_top_bottom_padding"
+            android:paddingBottom="@dimen/activity_title_bar_top_bottom_padding"
+            android:layout_gravity="top"
+            android:background="#c4ffb6"
+            android:layout_alignParentTop="true">
+
+           <ImageView
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:id="@+id/btnPrev"
+                android:src="@drawable/part_a_btn_back_nav"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="15dp" />
+
+            <ImageView
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:id="@+id/btnContactSharing"
+                android:src="@drawable/editnav"
+
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/btnChatNav"
+                android:src="@drawable/btnchatnav"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:scaleType="fitXY"
+                android:layout_marginRight="15dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/bodyLayout"
+            android:background="#ffffff">
+
+
+            <com.ginko.customview.MyViewPager
+                android:id="@+id/vPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/bottomLayout"
+                android:padding="5dp"
+                android:flipInterval="30"
+                android:persistentDrawingCache="animation" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/bottomLayout"
+                android:background="#7e5785"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true">
+
+                    <ImageView
+                        android:layout_width="34dp"
+                        android:layout_height="35dp"
+                        android:id="@+id/imgHome"
+                        android:src="@drawable/contact_profile_home_selected"
+                        android:scaleType="fitXY"
+                        android:background="@android:color/transparent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_gravity="center_vertical" />
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/imgWork"
+                        android:src="@drawable/contact_profile_work_non_selected"
+                        android:scaleType="fitXY"
+                        android:background="@android:color/transparent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="25dp"
+                        android:layout_gravity="center_vertical" />
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="35dp"
+                        android:id="@+id/imgBtnNote"
+                        android:layout_alignParentRight="false"
+                        android:src="@drawable/detailcomment"
+                        android:scaleType="fitXY"
+                        android:background="@android:color/transparent"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:id="@+id/imgBtnPlayVideo"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/contact_profile_play_video"
+                    android:scaleType="fitXY"
+                    android:background="@android:color/transparent"
+                    android:layout_centerVertical="true"
+                    android:visibility="visible"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/popupRootLayout"
+        android:visibility="invisible"/>
+</RelativeLayout>

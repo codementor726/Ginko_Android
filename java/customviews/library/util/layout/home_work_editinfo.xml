@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/part_a_home_bg" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/headerlayout"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:layout_gravity="top"
+        android:background="#c4ffb6"
+        android:layout_alignParentTop="true" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/home_info"
+            android:id="@+id/textViewTitle"
+            android:textColor="#2f4f2d"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+       	    android:id="@+id/btnNext"
+       	    android:layout_width="22dp"
+       	    android:layout_height="25dp"
+       		android:layout_alignParentRight="true"
+       		android:layout_marginRight="12dp"
+       		android:layout_centerVertical="true"
+       	    android:adjustViewBounds="true"
+       		android:scaleType="fitXY"
+       	    android:src="@drawable/part_a_btn_next_nav"
+       	    android:background="@android:color/transparent" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bodyLayout"
+        android:layout_below="@+id/headerlayout">
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:id="@+id/editFragmentLayout"
+            android:layout_above="@+id/blankLayoutTool"/>
+
+        <RelativeLayout
+            android:id="@+id/blankLayoutTool"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:padding="10dp">
+
+            <ImageView
+               android:id="@+id/btnFieldTag"
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:adjustViewBounds="true"
+               android:scaleType="fitCenter"
+               android:src="@drawable/part_a_btn_tag_green"
+               android:background="@android:color/transparent"
+               />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/btnFieldTag"
+                android:gravity="center_vertical|end">
+
+                <ImageView
+                   android:id="@+id/btnSharePublic"
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent"
+                   android:layout_gravity="center_vertical"
+                   android:adjustViewBounds="true"
+                   android:scaleType="fitCenter"
+                   android:src="@drawable/part_a_btn_lock_green"
+                   android:background="@android:color/transparent"
+                   android:layout_marginRight="15dp" />
+
+                <ImageView
+                    android:id="@+id/btnDeleteBackgrounds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/home_trash"
+                    android:background="@android:color/transparent"
+                    android:layout_marginRight="15dp" />
+
+                <ImageView
+                   android:id="@+id/btnBackgroundPhoto"
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent"
+                   android:layout_gravity="center_vertical"
+                   android:adjustViewBounds="true"
+                   android:scaleType="fitCenter"
+                   android:src="@drawable/part_a_btn_cameraroll_green"
+                   android:background="@android:color/transparent"
+                   android:layout_marginRight="15dp"
+                   android:layout_marginTop="2dp"
+                   android:layout_marginBottom="2dp" />
+
+                <ImageView
+                   android:id="@+id/btnEditInfo"
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent"
+                   android:layout_gravity="center_vertical"
+                   android:adjustViewBounds="true"
+                   android:scaleType="fitCenter"
+                   android:src="@drawable/part_a_btn_info_green"
+                   android:background="@android:color/transparent" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffffff">
+    <RelativeLayout
+        android:id="@+id/headerlayout"
+        android:background="#ffc4ffb6"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:layout_alignParentTop="true" >
+
+        <ImageView
+            android:id="@+id/btnPrev"
+            android:layout_width="23dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15.0dip"
+            android:src="@drawable/btn_prev"
+            android:scaleType="fitXY"
+            android:layout_centerVertical="true"
+            android:visibility="visible"/>
+
+        <ImageView
+            android:id="@+id/btnTrash"
+            android:layout_width="22dp"
+            android:layout_height="26dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15.0dip"
+            android:src="@drawable/btn_chat_delete"
+            android:scaleType="fitXY"
+            android:layout_centerVertical="true"
+            android:visibility="gone"/>
+
+        <TextView
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#ff37632b"
+            android:id="@+id/txtTitle"
+            android:text="@string/title_activity_group_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_title_bar_top_bottom_padding"
+            android:layout_marginBottom="@dimen/activity_title_bar_top_bottom_padding"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:id="@+id/btnAddGroup"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15.0dip"
+            android:src="@drawable/addbtn"
+            android:scaleType="fitXY"
+            android:layout_centerVertical="true"
+            android:visibility="visible"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/main_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/leafbgforblank"
+        >
+        <TextView
+            android:id="@+id/txtNoneGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_group_description"
+            android:gravity="center"
+            android:textColor="@color/blue_text"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            />
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:descendantFocusability="blocksDescendants"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+</LinearLayout>

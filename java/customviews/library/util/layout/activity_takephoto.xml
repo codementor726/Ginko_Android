@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#c4ffb6" >
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/activity_title_bar_top_bottom_padding"
+            android:layout_marginTop="@dimen/activity_title_bar_top_bottom_padding"
+            android:text="@string/home_info"
+            android:textColor="#37632B"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btnPrev"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:src="@drawable/btn_prev" />
+        <ImageView
+            android:id="@+id/btnDelete"
+            android:layout_width="20dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            android:adjustViewBounds="true"
+            android:src="@drawable/trash" />
+
+        <ImageView
+            android:id="@+id/btnApply"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/part_a_btn_check_nav"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#b2b2b2"
+        android:orientation="vertical" >
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/body_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+         <com.videophotofilter.library.android.com.AspectFrameLayout
+             android:id="@+id/cameraPreview_afl"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_above="@+id/controll_layout"
+             android:layout_alignParentTop="true"
+             android:layout_centerInParent="true" >
+			<android.opengl.GLSurfaceView
+		        android:id="@+id/surfaceView"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent" />
+
+			<com.videophotofilter.library.android.com.SquarePhotoImageView
+			    android:id="@+id/imgTakenPhotoView"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:scaleType="fitXY" />
+
+	     </com.videophotofilter.library.android.com.AspectFrameLayout>
+
+         <LinearLayout
+             android:id="@+id/controll_layout"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_alignParentBottom="true"
+             android:background="#ff262626"
+             android:orientation="vertical" >
+
+             <RelativeLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="60dp"
+                 android:background="#ff161616"
+                 android:paddingBottom="15dp"
+                 android:paddingLeft="60dp"
+                 android:paddingRight="60dp"
+                 android:paddingTop="15dp" >
+
+                 <ImageView
+                     android:id="@+id/imgButtonGirdOnOff"
+                     android:layout_width="wrap_content"
+                     android:layout_height="match_parent"
+                     android:scaleType="fitCenter"
+                     android:src="@drawable/video_grid_off" />
+
+                 <ImageView
+                     android:id="@+id/imgBtnCameraFrontOnOff"
+                     android:layout_width="wrap_content"
+                     android:layout_height="match_parent"
+                     android:layout_centerInParent="true"
+                     android:scaleType="fitCenter"
+                     android:src="@drawable/video_camera_front_off" />
+
+                  <ImageView
+                      android:id="@+id/imgBtnFlashLightOnOff"
+                      android:layout_width="wrap_content"
+                      android:layout_height="match_parent"
+                      android:layout_alignParentRight="true"
+                      android:scaleType="fitCenter"
+                      android:src="@drawable/video_light_off" />
+
+             </RelativeLayout>
+
+             <RelativeLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:padding="10dp" >
+
+                 <ImageButton
+                     android:id="@+id/imgButtonTakePhoto"
+                     android:layout_width="70dp"
+                     android:layout_height="70dp"
+                     android:layout_centerInParent="true"
+                     android:background="#00000000"
+                     android:scaleType="fitXY"
+                     android:src="@drawable/btn_take_photo_shot" />
+
+             </RelativeLayout>
+
+         </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

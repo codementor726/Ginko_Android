@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/emails_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal" >
+
+    <EditText
+        android:id="@+id/txtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:background="@drawable/et"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="Email Address"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <requestFocus />
+    </EditText>
+
+    <ImageButton
+        android:id="@+id/btn_remove"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:onClick="addEmailField"
+        android:src="@drawable/btn_remove_red" />
+
+</LinearLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/rootLayout"
+    >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/imageSelectionCheck"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/contact_info_item_non_selected"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/txtGreyContactName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@+id/imageSelectionCheck"
+            android:textColor="@color/blue_text"
+            android:textSize="18sp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/greyContactTypeLayout"
+            android:text="Stony Zhang" />
+
+
+        <LinearLayout
+            android:id="@+id/greyContactTypeLayout"
+            android:layout_width="@dimen/sync_grey_contact_type_selector_width"
+            android:layout_height="@dimen/sync_grey_contact_type_selector_height"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="bottom"
+            >
+
+            <ImageView
+                android:id="@+id/imgEntity"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:baselineAlignBottom="true"
+                android:src="@drawable/btnentity" />
+
+            <ImageView
+                android:id="@+id/imgWork"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:baselineAlignBottom="true"
+                android:paddingTop="3dp"
+                android:src="@drawable/btnwork" />
+
+            <ImageView
+                android:id="@+id/imgHome"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:baselineAlignBottom="true"
+                android:src="@drawable/btnhome" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#7e5785"/>
+</LinearLayout>

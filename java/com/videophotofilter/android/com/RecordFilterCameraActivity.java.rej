@@ -1,0 +1,11 @@
+diff a/gINKO/src/main/java/com/videophotofilter/android/com/RecordFilterCameraActivity.java b/gINKO/src/main/java/com/videophotofilter/android/com/RecordFilterCameraActivity.java	(rejected hunks)
+@@ -688,7 +688,8 @@
+ 						}
+ 						isRecording = false;
+ 
+-						totalRecordedTime += videoSegments.get(videoSegments.size() - 1).durationInMills;
++						if (videoSegments.size() > 1)
++							totalRecordedTime += videoSegments.get(videoSegments.size() - 1).durationInMills;
+ 
+ 						outputFilePath = mSaveDirectoryPath + "/output" + videoSegments.size() + ".mp4";
+ 						audioFilePath = mSaveDirectoryPath + "/video" + videoSegments.size() + ".mp4";

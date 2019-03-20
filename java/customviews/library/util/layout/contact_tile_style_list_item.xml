@@ -1,0 +1,123 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:networkimageview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/rootLayout"
+    >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:zhy="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/contact_list_item"
+        android:layout_marginTop="20dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+                <ImageView
+                    android:id="@+id/imgCheckBox"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/contact_info_item_non_selected"
+                    android:visibility="gone"/>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <com.android.volley.toolbox.NetworkImageView
+                        android:id="@+id/profileImage"
+                        android:layout_width="300dp"
+                        android:layout_height="300dp"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitXY"
+                        networkimageview:CircleDiameterInPixels="300dp"
+                        networkimageview:BorderColor="@color/blue_text"
+                        networkimageview:BorderThickness="5dp"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/imgNewIcon"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignRight="@+id/profileImage"
+                        android:layout_alignTop="@+id/profileImage"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginTop="25dp"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/new_contact_icon"
+                        android:visibility="visible"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/contact_list_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip"
+            android:background="#e6e0ec">
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true">
+                <TextView
+                    android:id="@+id/txtContactName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:ellipsize="none"
+                    android:maxLines="2"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/phone_icon"
+                    android:lineSpacingExtra="5dp"
+                    android:layout_centerVertical="true"
+                    android:gravity="left"
+                    android:textColor="@color/blue_text"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <ImageView
+                    android:id="@+id/email_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Profile Image"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/mail_2x" />
+
+                <ImageView
+                    android:id="@+id/phone_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="70dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Profile Image"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/phone_sel_70" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

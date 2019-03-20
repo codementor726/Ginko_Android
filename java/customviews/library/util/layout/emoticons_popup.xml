@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/emoticons_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_weight="0.8" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_weight="0.2"
+        android:padding="8dp" >
+
+        <com.ginko.common.CirclePageIndicator
+            android:id="@+id/page_indicator"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="false"
+            android:layout_centerInParent="true"
+            app:fillColor="#FF888888"
+            app:pageColor="#88EEEEEE"
+            app:radius="5dp"
+            app:strokeColor="#FFC9C9C9"
+            app:strokeWidth="1dp" />
+
+    </RelativeLayout>
+</LinearLayout>

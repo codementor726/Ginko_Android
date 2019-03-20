@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.actionbar.WebviewActivity" >
+    <RelativeLayout
+        android:id="@+id/headerlayout"
+        android:background="#ffc4ffb6"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/btnPrev"
+            android:layout_width="22dip"
+            android:layout_height="25dip"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15.0dip"
+            android:adjustViewBounds="false"
+            android:src="@drawable/part_a_btn_back_nav"
+            android:scaleType="fitXY"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textSize="26.0sp"
+            android:textStyle="bold"
+            android:textColor="#ff37632b"
+            android:id="@+id/txtTitle"
+            android:text="@string/title_activity_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_title_bar_top_bottom_padding"
+            android:layout_marginBottom="@dimen/activity_title_bar_top_bottom_padding"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+    <WebView
+        android:id="@+id/wv"
+        android:layout_below="@+id/headerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

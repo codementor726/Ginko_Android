@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/fontcolor_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/change_color"
+        android:layout_alignRight="@id/change_color"
+        android:layout_below="@id/change_color"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/btn_green"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="#00FF00"
+            android:text="   " />
+
+        <Button
+            android:id="@+id/btn_blue"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="#0000FF"
+            android:text="   " />
+
+        <Button
+            android:id="@+id/btn_black"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:background="@android:color/black"
+            android:text="   " />
+
+        <Button
+            android:id="@+id/btn_white"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@android:color/white"
+            android:text="   " />
+
+        <Button
+            android:id="@+id/btn_red"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="#FF0000"
+            android:text="   " />
+    </LinearLayout>
+
+</LinearLayout>

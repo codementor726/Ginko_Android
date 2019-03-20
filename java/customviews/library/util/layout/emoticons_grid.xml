@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <GridView
+        android:id="@+id/emoticons_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:horizontalSpacing="@dimen/chat_emoticon_grid_horizontal_spacing"
+        android:numColumns="7"
+        android:scrollbars="@null"
+        android:verticalSpacing="@dimen/chat_emoticon_grid_vertical_spacing" />
+
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:networkimageview="http://schemas.android.com/apk/res-auto"
+    xmlns:textproperty="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="5dp">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/imgEntityPhoto"
+            android:layout_width="@dimen/entity_view_message_photo_size"
+            android:layout_height="@dimen/entity_view_message_photo_size"
+            android:src="@drawable/entity_dummy"
+            android:scaleType="fitXY"
+            networkimageview:CircleDiameterInPixels="@dimen/entity_view_message_photo_size"
+            networkimageview:BorderColor="@color/contact_photo_border_color"
+            networkimageview:BorderThickness="1.0dip"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Ginko"
+            android:id="@+id/txtEntityName"
+            android:layout_toRightOf="@id/imgEntityPhoto"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/blue_text"
+            android:textSize="24sp"
+            android:layout_marginTop="5dp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/entity_view_message_content_layout_padding"
+            android:layout_marginLeft="@dimen/entity_view_message_content_left_right_margin"
+            android:layout_marginRight="@dimen/entity_view_message_content_left_right_margin"
+            android:id="@+id/messageContentLayout"
+            android:layout_below="@id/imgEntityPhoto"
+            android:background="@drawable/entity_post_message_item_bg">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.ginko.customview.CustomNetworkImageView
+                    android:id="@+id/imgPhotoView"
+                    android:layout_width="@dimen/entity_view_message_min_width"
+                    android:layout_height="@dimen/entity_view_message_min_height"
+                    networkimageview:adjustImageAspect="true"
+                    android:src="@drawable/im_image"
+                    android:scaleType="fitCenter" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:layout_below="@+id/messageContentLayout">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:id="@+id/imageView7"
+                android:src="@drawable/entity_message_enter"
+                android:layout_marginLeft="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2015-01-15 , 2:34 AM"
+                android:id="@+id/txtTime"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/blue_text"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#000000"
+        />
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/headerlayout"
+        android:paddingTop="@dimen/activity_title_bar_top_bottom_padding"
+        android:paddingBottom="@dimen/activity_title_bar_top_bottom_padding"
+        android:background="#c4ffb6"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/str_chat_location"
+            android:id="@+id/txtLocation"
+            android:textColor="#37632B"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:singleLine="true"
+            android:layout_toRightOf="@+id/btnPrev"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_centerInParent="true"
+            android:gravity="center" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/btnPrev"
+            android:src="@drawable/part_a_btn_back_nav"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="15dp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bodayLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <fragment
+            android:id="@+id/map"
+            android:name="com.example.GoogleMapVersion2.Fragment"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            class="com.google.android.gms.maps.SupportMapFragment" />
+    </RelativeLayout>
+
+
+</LinearLayout>

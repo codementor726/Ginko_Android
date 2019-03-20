@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/emoticon_item_rootlayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/emoticon_item_background_selector"
+    android:clickable="true"
+    android:gravity="center" >
+
+    <ImageView
+        android:id="@+id/imgEmoticonItem"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:src="@drawable/keyboard_backbutton" />
+
+</LinearLayout>

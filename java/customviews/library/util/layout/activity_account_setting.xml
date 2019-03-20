@@ -1,0 +1,230 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    tools:context="com.ginko.activity.menu.AccountSettingActivity">
+    <RelativeLayout
+        android:id="@+id/headerlayout"
+        android:background="#ffc4ffb6"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <ImageButton
+            android:id="@+id/btnPrev"
+            android:layout_width="22dip"
+            android:layout_height="25dip"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15.0dip"
+            android:adjustViewBounds="false"
+            android:src="@drawable/part_a_btn_back_nav"
+            android:scaleType="fitXY"
+            android:background="@android:color/transparent"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textSize="26.0sp"
+            android:textStyle="bold"
+            android:textColor="#ff37632b"
+            android:id="@+id/txtTitle"
+            android:text="@string/title_activity_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_title_bar_top_bottom_padding"
+            android:layout_marginBottom="@dimen/activity_title_bar_top_bottom_padding"
+            android:layout_centerInParent="true" />
+
+        <RelativeLayout
+            android:id="@+id/chatNavLayout"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+            <ImageView
+                android:id="@+id/btnChatNav"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15.0dip"
+                android:src="@drawable/btnchatnav"
+                android:scaleType="fitXY"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtMessageBadge"
+                android:layout_alignParentRight="true"
+                android:minWidth="23dp"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:text="1"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:singleLine="true"
+                android:gravity="center"
+                android:background="@drawable/white_number_badge_bg"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/headerlayout"
+        android:layout_above="@+id/bottom"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_vertical_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:background="@drawable/leafbgforblank"
+        >
+
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/lbl_h1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sort by" />
+
+        <LinearLayout
+            android:id="@+id/layout_sortby"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView"
+            android:layout_toEndOf="@+id/textView"
+            android:layout_toRightOf="@+id/textView"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/shareGroup"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="Share type"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/sort_by_fname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textView"
+                    android:text="First Name"
+                    android:textColor="@color/blue_text" />
+
+                <RadioButton
+                    android:id="@+id/sort_by_lname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Last Name"
+                    android:textColor="@color/blue_text" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/layout_sortby"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/seperator" />
+
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/lbl_h1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView1"
+            android:layout_marginBottom="10dp"
+            android:text="Language" />
+
+        <EditText
+            android:id="@+id/et_language"
+            style="@style/et_general"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView1"
+            android:layout_gravity="center_vertical"
+            android:enabled="false"
+            android:text="English" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/et_language"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/seperator" />
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/lbl_h1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView"
+            android:layout_marginBottom="10dp"
+            android:text="Deactivate Account" />
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView2" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/list"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/seperator" />
+
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/lbl_h3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView2"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/deactivate_warning"
+            android:textSize="13sp" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/tabbar"
+            android:gravity="center_vertical">
+
+            <Button
+                android:id="@+id/btn_deactivate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:background="@android:color/transparent"
+                android:text="Deactivate"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

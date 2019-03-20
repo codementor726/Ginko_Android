@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/rootLayout">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/headerlayout"
+        android:paddingTop="@dimen/activity_title_bar_top_bottom_padding"
+        android:paddingBottom="@dimen/activity_title_bar_top_bottom_padding"
+        android:background="#c4ffb6"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Location"
+            android:id="@+id/txtLocation"
+            android:textColor="#37632B"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/btnPrev"
+            android:src="@drawable/part_a_btn_back_nav"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="15dp" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:id="@+id/btnConfirm"
+            android:src="@drawable/checknav"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bodayLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#c9c9ce"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:focusableInTouchMode="true">
+
+                <EditText
+                    android:id="@+id/edtSearchLocation"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/chat_editmessage_background"
+                    android:hint="@string/str_search_places"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="10dp"
+                    android:textColor="#000000"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="18sp"
+                    android:nextFocusLeft="@+id/edtSearchLocation"
+                    android:nextFocusUp="@+id/edtSearchLocation"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView6"
+                    android:src="@drawable/edit_action_search_icon"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp" />
+            </RelativeLayout>
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.example.GoogleMapVersion2.Fragment"
+                android:layout_width="fill_parent"
+                android:layout_height="250dp"
+                class="com.google.android.gms.maps.SupportMapFragment" />
+
+            <ListView
+                android:id="@+id/searchedLocationListview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                android:layout_below="@+id/map"
+                android:choiceMode="singleChoice"
+                android:divider="#dddddd"
+                android:dividerHeight="1dp"
+                android:scrollbars="@null" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/part_a_home_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/headerlayout"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_gravity="top"
+        android:background="#c4ffb6"
+        android:layout_alignParentTop="true"
+        >
+
+        <ImageView
+            android:id="@+id/btnPrev"
+            android:layout_width="25dp"
+            android:layout_height="28dp"
+            android:scaleType="fitCenter"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/part_a_btn_back_nav"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/home_info"
+            android:id="@+id/textViewTitle"
+            android:textColor="#2f4f2d"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true" />
+        
+        <Button
+            android:id="@+id/btnSkipVideo"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:layout_centerVertical="true"
+            android:textColor="#2f4f2d"
+            android:textSize="20sp"
+            android:background="@android:color/transparent"
+            android:text="@string/skip" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/bodyLayout"
+        android:weightSum="1.0">
+
+        <LinearLayout
+            android:id="@+id/blankLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.35"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+           <TextView
+                android:id="@+id/txtDescription"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="15dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="@string/home_content_description_video"
+                android:textColor="#ff37632B"
+                android:textSize="23sp"
+               android:layout_marginTop="30dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/blankLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.15"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/blankLayout14"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                tools:ignore="NestedWeights"
+                android:orientation="vertical" />
+
+            <ImageButton
+                android:id="@+id/btnCameraVideo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.11"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/part_a_btn_video_green"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/button"
+                tools:ignore="NestedWeights"
+                android:onClick="onBtnCameraInHomeVideo" />
+
+            <LinearLayout
+                android:id="@+id/blankLayout15"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.15"
+                tools:ignore="NestedWeights"
+                android:orientation="vertical" />
+
+            <ImageButton
+                android:id="@+id/btnCameraRollVideo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.11"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/part_a_btn_cameraroll_green"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/button"
+                tools:ignore="NestedWeights"
+                android:onClick="onBtnCameraRollInHomeVideo" />
+
+            <LinearLayout
+                android:id="@+id/blankLayout16"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                tools:ignore="NestedWeights"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/blankLayout6"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:networkimageview="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/photo"
+            android:layout_width="@dimen/search_contact_photo_size"
+            android:layout_height="@dimen/search_contact_photo_size"
+            android:src="@drawable/img_placeholder"
+            android:scaleType="fitXY"
+            android:layout_centerVertical="true"
+            networkimageview:CircleDiameterInPixels="@dimen/sprout_contact_photo_size"
+            networkimageview:BorderColor="@color/blue_text"
+            networkimageview:BorderThickness="2dp"
+            android:layout_marginRight="10dp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/txtContactName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_centerVertical="true"
+            android:textColor="@color/blue_text"
+            android:text="Mad Max"
+            android:lineSpacingExtra="10dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textSize="20sp"
+            android:layout_toLeftOf="@+id/statusLayout"
+            android:layout_toRightOf="@+id/photo"/>
+        <ImageView
+            android:id="@+id/imgContactStatus"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/btnchat"
+            android:visibility="invisible"
+            />
+        <LinearLayout
+            android:id="@+id/statusLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true">
+
+            <RelativeLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/imgEntityStatus"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/leaf_solid"
+                    android:visibility="visible"
+                    />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/txtFollowers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="#656565"
+                android:textSize="16sp"
+                android:text="12 followers"
+                android:layout_below="@+id/imgStatusLayout"
+                android:visibility="invisible"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

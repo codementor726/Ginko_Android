@@ -1,0 +1,231 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    tools:context="com.ginko.activity.cb.SaveCBActivity" >
+    <RelativeLayout
+        android:id="@+id/headerlayout"
+        android:background="#ffc4ffb6"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/btnPrev"
+            android:layout_width="22dip"
+            android:layout_height="25dip"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15.0dip"
+            android:adjustViewBounds="false"
+            android:src="@drawable/part_a_btn_back_nav"
+            android:scaleType="fitXY"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textSize="26.0sp"
+            android:textStyle="bold"
+            android:textColor="#ff37632b"
+            android:id="@+id/txtTitle"
+            android:text="@string/title_activity_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_title_bar_top_bottom_padding"
+            android:layout_marginBottom="@dimen/activity_title_bar_top_bottom_padding"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:id="@+id/btnConfirm"
+            android:layout_width="28dp"
+            android:layout_height="23dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15.0dip"
+            android:src="@drawable/part_a_btn_check_nav"
+            android:scaleType="fitXY"
+            android:layout_centerVertical="true"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bodyLayout"
+        android:layout_below="@+id/headerlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:background="@drawable/leaf_bg_for_blank"
+        android:layout_above="@+id/bottomLayout">
+
+        <TextView
+            android:id="@+id/txtEmail"
+            style="@style/lbl_h1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="rj@gmail.com"
+            android:layout_centerHorizontal="true">
+        </TextView>
+
+        <RadioGroup
+            android:id="@+id/onOffGroup"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtEmail"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="10dp" >
+
+            <RadioButton
+                android:id="@+id/rdTurnOn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="ON"
+                android:textColor="@color/blue_text"
+                android:textSize="28sp" />
+
+            <RadioButton
+                android:id="@+id/rdTurnOff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="OFF"
+                android:textColor="@color/blue_text"
+                android:textSize="28sp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/txtDescription"
+            style="@style/lbl_h3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/onOffGroup"
+            android:gravity="center"
+            android:text="@string/builder_automatically_send_exchange_requests_to_new_email_contacts"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <ImageView
+            android:id="@+id/separate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtDescription"
+            android:layout_marginBottom="18dp"
+            android:layout_marginTop="18dp"
+            android:src="@drawable/seperator"
+            android:layout_centerHorizontal="true" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/separate"
+            android:id="@+id/shareOnLayout"
+            android:visibility="invisible">
+
+            <RelativeLayout
+                android:id="@+id/shareGroup"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:paddingRight="60dp">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/imgShareAll"
+                    android:src="@drawable/share_profile_non_selected"
+                    android:scaleType="fitXY"
+                    android:layout_centerVertical="true"
+                    android:background="#00000000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_share_all"
+                    android:id="@+id/txtShareAll"
+                    android:textColor="#6e4270"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imgShareAll" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/imgChatOnly"
+                    android:src="@drawable/share_profile_non_selected"
+                    android:scaleType="fitXY"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/txtChatOnly"
+                    android:background="#00000000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_share_chat_only"
+                    android:id="@+id/txtChatOnly"
+                    android:textColor="#6e4270"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="8dp"
+                    android:lineSpacingExtra="5dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shareGroup" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/separate"
+            android:id="@+id/shareOffLayout"
+            android:visibility="visible">
+            <ImageView
+                android:id="@+id/imgGinkoLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:scaleType="fitCenter"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/img_logo"
+                android:layout_marginTop="30dp"/>
+            <TextView
+                android:id="@+id/txtHintTurnOn"
+                android:textColor="@color/blue_text"
+                android:textSize="20sp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgGinkoLogo"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                android:text="@string/builder_turn_on_to_grow_your_contacts" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:id="@+id/bottomLayout"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="#7e5785">
+        <ImageView
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:src="@drawable/img_trash_white_border"
+            android:scaleType="fitCenter"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+</RelativeLayout>

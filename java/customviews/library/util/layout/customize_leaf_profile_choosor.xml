@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RadioGroup
+        android:id="@+id/shareGroup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="Share type"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rdShareAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="Share all"
+            android:textColor="@color/blue_text" />
+
+        <RadioButton
+            android:id="@+id/rdChatOnly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:text="I&apos;m shy, chat only"
+            android:textColor="@color/blue_text" />
+    </RadioGroup>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shareGroup" />
+
+</RelativeLayout>

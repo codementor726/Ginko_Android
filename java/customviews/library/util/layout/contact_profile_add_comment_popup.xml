@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/headerlayout"
+            android:paddingTop="@dimen/activity_title_bar_top_bottom_padding"
+            android:paddingBottom="@dimen/activity_title_bar_top_bottom_padding"
+            android:background="#c4ffb6"
+            android:layout_alignParentTop="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/str_contact_profile_add_note_title"
+                android:id="@+id/txtVideoFilename"
+                android:textColor="#37632B"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:layout_centerInParent="true" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/btnNotePopupClose"
+                android:src="@drawable/btnclose"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="15dp" />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:id="@+id/btnNotePopupConfirm"
+                android:src="@drawable/checknav"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:scaleType="fitXY"
+                android:layout_marginRight="15dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/bodyLayout"
+            android:background="#ffffff">
+            <com.ginko.activity.im.ImInputEditTExt
+                android:id="@+id/edtNotes"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textColor="#000000"
+                android:background="#00000000"
+                android:hint="@string/str_enter_notes_hint"
+                android:padding="10dp"
+                android:textSize="22sp"
+                android:gravity="top" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

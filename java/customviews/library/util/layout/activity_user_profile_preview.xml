@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/headerlayout"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:layout_gravity="top"
+        android:background="#c4ffb6"
+        android:layout_alignParentTop="true" >
+
+        <ImageView
+            android:id="@+id/btnPrev"
+            android:layout_width="22dp"
+            android:layout_height="25dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/part_a_btn_back_nav"
+            android:adjustViewBounds="false"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/title_activity_user_profile_preview"
+            android:id="@+id/textViewTitle"
+            android:textColor="#2f4f2d"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:id="@+id/btnEdit"
+            android:layout_width="27dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_pen"
+            android:background="@android:color/transparent" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bodyLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/headerlayout">
+
+        <com.ginko.customview.MyViewPager
+            android:id="@+id/vPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/contact_navi"
+            android:flipInterval="30"
+            android:padding="5dp"
+            android:persistentDrawingCache="animation" />
+
+        <RelativeLayout
+            android:id="@+id/contact_navi"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:padding="10dp"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:id="@+id/btn_home"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
+                android:src="@drawable/btnhomeedit" />
+
+            <ImageView
+                android:id="@+id/btn_work"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:scaleType="fitCenter"
+                android:layout_toRightOf="@+id/btn_home"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/img_icon_work" />
+
+            <ImageView
+                android:id="@+id/btn_privilege"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:scaleType="fitCenter"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/btnlockedit" />
+
+            <ImageView
+                android:id="@+id/btn_play_video"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:scaleType="fitCenter"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/btnplayedit" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

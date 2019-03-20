@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/part_a_get_start_bg"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+	    android:id="@+id/blankLayoutNavBar"
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="0.10"
+	    android:background="#baffb6"
+	    android:gravity="center"
+	    android:orientation="horizontal" >
+
+	    <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/create_your_leaf"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:id="@+id/blankLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.70"
+        android:gravity="center"
+        android:orientation="horizontal">
+        
+	    <LinearLayout
+            android:id="@+id/blankLayout2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            tools:ignore="NestedWeights"
+            android:orientation="vertical" >
+        </LinearLayout>
+        
+	    <ImageView
+	        android:id="@+id/imageView1"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="bottom"
+	        android:layout_weight="0.8"
+	        android:adjustViewBounds="true"
+	        android:scaleType="fitXY"
+	        android:contentDescription="@string/logo"
+	        android:src="@drawable/part_a_get_start_fg" />
+	    
+	    <LinearLayout
+            android:id="@+id/blankLayout3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:orientation="vertical" >
+        </LinearLayout>
+	    
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/blankLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.30"
+        android:gravity="center"
+        android:orientation="horizontal">
+	    
+        <LinearLayout
+            		android:id="@+id/blankLayout5"
+            		android:layout_width="0dp"
+            		android:layout_height="match_parent"
+            		android:layout_weight="0.33"
+            		tools:ignore="NestedWeights"
+            		android:orientation="vertical" />
+	    
+        <ImageButton
+	        	    android:id="@+id/btnGetStart"
+	        	    android:layout_width="0dp"
+	        	    android:layout_height="wrap_content"
+	        	    android:layout_gravity="center"
+	        	    android:layout_weight="0.34"
+	        	    android:adjustViewBounds="true"
+            		android:scaleType="fitXY"
+	        	    android:src="@drawable/part_a_btn_get_start"
+	        	    android:background="@android:color/transparent"
+	        	    android:contentDescription="@string/button"
+	        	    tools:ignore="NestedWeights"
+	        	    android:onClick="onBtnGetStart" />
+        
+        <LinearLayout
+            		android:id="@+id/blankLayout6"
+            		android:layout_width="0dp"
+            		android:layout_height="match_parent"
+            		android:layout_weight="0.33"
+            		android:orientation="vertical" />
+	    
+    </LinearLayout>
+
+</LinearLayout>
